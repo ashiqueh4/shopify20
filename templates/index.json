@@ -211,19 +211,12 @@
             "image_bg": "shopify:\/\/shop_images\/hero-work.png",
             "image_hover": "shopify:\/\/shop_images\/hero-work-hover.png"
           }
-        },
-        "7d9322f4-90aa-4877-94d1-adb12015c00e": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
         }
       },
       "block_order": [
         "447d8de1-69b7-461b-be9f-c19ef174ca15",
         "62e636ed-006a-44aa-ae73-c55865c87d20",
-        "33923373-53a1-4667-b35b-186a664b3cf2",
-        "7d9322f4-90aa-4877-94d1-adb12015c00e"
+        "33923373-53a1-4667-b35b-186a664b3cf2"
       ],
       "settings": {
       }
