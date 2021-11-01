@@ -1,0 +1,48 @@
+
+
+<div class="hero-collections">
+    <div class="hero-collections__cart-ctn">
+        {% for block in section.blocks %}
+            <a href="block.settings.collection.url">
+            <div class="" styl="background-image:url({{ block.settings.image_hover|img_url: 'medium' }})"></div>
+            <div class="" styl="background-image:url({{ block.settings.image_hover|img_url: 'medium' }})"></div>
+            <h3>{{ block.settings.collection.title| downcase }}</h3>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% schema %}
+{
+    "name":"Hero",
+    "blocks":[
+    {
+        "type": "collection",
+        "name": "Collection",
+        "settings": [
+        {
+        "type": "collection",
+        "id": "collection",
+        "label":"Collection"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_bg",
+            "label":"Image Background"
+        }, 
+        {
+            "type": "image_picker",
+            "id": "image_hover",
+            "label":"Image Hover"
+        }  
+        ]
+    }
+    ],
+    "presets": [
+        {
+            "name":"Hero"
+        }
+    ]
+}
+{% endschema %}

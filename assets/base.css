@@ -1,3 +1,56 @@
+@font-face {
+  font-family:'Byrd Regular';
+  src: url('Byrd-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family:'Opposit Bold';
+  src: url('Opposit-Bold.otf') format('opentype');
+}
+.collection-list-wrapper .title-wrapper-with-link {
+  display: block;
+  text-align: center;
+}
+
+.header-wrapper:before {
+  position: absolute;
+  height: 2%;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  background-color: #4d4d4d;
+  z-index: 1;
+  content: "";
+}
+
+
+.list-menu.list-menu--inline li {
+  background: #fff;
+  position: relative;
+  z-index: 10;
+}
+.list-menu--inline {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.header__menu-item span {
+  text-decoration: none;
+}
+.header__search, #cart-icon-bubble {
+  background: #fff;
+  position: relative;
+  z-index: 10;
+}
+#cart-icon-bubble {
+  margin-left: 2rem;
+}
+.header__heading-link.link.link--text.focus-inset {
+  background: #fff;
+  position: relative;
+  z-index: 10;
+}
+
 /* Color custom properties */
 
 :root,
@@ -620,6 +673,7 @@ hr {
   text-decoration: none;
   color: currentColor;
   display: block;
+  text-align: center;
 }
 
 .placeholder {
@@ -1850,7 +1904,8 @@ input[type='checkbox'] {
 }
 
 .header-wrapper--border-bottom {
-  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  /* border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08); */
+  border-bottom: none;
 }
 
 .header {
@@ -1881,8 +1936,8 @@ input[type='checkbox'] {
   }
 
   .header--middle-left {
-    grid-template-areas: 'heading navigation icons';
-    grid-template-columns: auto auto 1fr;
+    grid-template-areas: 'navigation heading  icons';
+    grid-template-columns: auto auto auto;
     column-gap: 2rem;
   }
 
@@ -2313,6 +2368,10 @@ details-disclosure > details {
   background: var(--color-background);
   background: var(--gradient-background);
   background-attachment: fixed;
+}
+.collection .title-wrapper-with-link {
+  display: block;
+  text-align: center;
 }
 
 @media screen and (forced-colors: active) {

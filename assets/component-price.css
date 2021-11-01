@@ -1,7 +1,8 @@
 .price {
   align-items: center;
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
+  flex-direction: column;
   flex-wrap: wrap;
   font-size: 1.6rem;
   letter-spacing: 0.1rem;
