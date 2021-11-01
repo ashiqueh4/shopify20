@@ -5,9 +5,8 @@
             <a class="hero-collections__card" href="{{ block.settings.collection.url }}">
             <div class="hero-collections__card--bg" styl="background-image:url(https://{{ block.settings.image_bg|img_url: 'medium' }})"></div>
             <div class="hero-collections__card--hover" styl="background-image:url(https://{{ block.settings.image_hover|img_url: 'medium' }})"></div>
-            <div class="overlay">
             <h3 class="hero-collections__cart-title">{{ block.settings.collection.title| downcase }}</h3>
-           </div>
+           
         </a>
         {% endfor %}
     </div>
@@ -41,7 +40,7 @@
     margin: 80px 0 100px;
 }
 .hero-collections__card-ctn {
-    display: flex;
+    display: flex; 
     flex-direction: column;
     position: relative;
 }
@@ -62,6 +61,7 @@
     transform: translate(-50%, -50%);
 }
 </style>
+
 
 {% schema %}
 {
