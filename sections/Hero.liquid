@@ -3,8 +3,8 @@
     <div class="hero-collections__card-ctn">
         {% for block in section.blocks %}
             <a class="hero-collections__card" href="{{ block.settings.collection.url }}">
-            <div class="hero-collections__card--bg" styl="background-image:url(https://{{ block.settings.image_bg|img_url: 'medium' }})"></div>
-            <div class="hero-collections__card--hover" styl="background-image:url(https://{{ block.settings.image_hover|img_url: 'medium' }})"></div>
+            <div class="hero-collections__card--bg" style="background-image: url({{ block.settings.image_bg|img_url: 'medium' }});"></div>
+            <div class="hero-collections__card--hover" style="background-image:url({{ block.settings.image_hover|img_url: 'medium' }})"></div>
             <h3 class="hero-collections__cart-title">{{ block.settings.collection.title| downcase }}</h3>
            
         </a>
@@ -41,10 +41,11 @@
 }
 .hero-collections__card-ctn {
     display: flex; 
-    flex-direction: column;
+    flex-direction: row;
     position: relative;
 }
-.hero-collections__card:hover > .hero-collections__card-title {
+.hero-collections__card:hover > .hero-collections__cart-title,
+.hero-collections__card:hover > .hero-collections__card--bg {
     opacity: 0;
     transition: none;
 }
@@ -58,7 +59,47 @@
     top: 50%;
     left: 50%; 
     border-radius: 4px;
+    opacity: 1;
     transform: translate(-50%, -50%);
+}
+
+.hero-collections__card--hover {
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    border-radius: 4px;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition:none;
+}
+.hero-collections__card:hover > .hero-collections__card--hover {
+    opacity: 1;
+    transition:opacity 0.3s;
+}
+@media screen and (min-width:768px){
+	.hero-collections__card{
+	height:200px;
+	width:240px;
+	}
+}
+
+@media screen and (min-width:900px){
+.hero-collections__card{
+	height:230px;
+	width:290px;
+	}
+}
+
+@media screen and (min-width:1200px){
+.hero-collections__card{
+	height:270px;
+	width:330px;
+	}
 }
 </style>
 
