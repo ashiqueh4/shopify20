@@ -1,17 +1,67 @@
 
-
 <div class="hero-collections">
-    <div class="hero-collections__cart-ctn">
+    <div class="hero-collections__card-ctn">
         {% for block in section.blocks %}
-            <a href="block.settings.collection.url">
-            <div class="" styl="background-image:url({{ block.settings.image_hover|img_url: 'medium' }})"></div>
-            <div class="" styl="background-image:url({{ block.settings.image_hover|img_url: 'medium' }})"></div>
-            <h3>{{ block.settings.collection.title| downcase }}</h3>
+            <a class="hero-collections__card" href="{{ block.settings.collection.url }}">
+            <div class="hero-collections__card--bg" styl="background-image:url(https://{{ block.settings.image_bg|img_url: 'medium' }})"></div>
+            <div class="hero-collections__card--hover" styl="background-image:url(https://{{ block.settings.image_hover|img_url: 'medium' }})"></div>
+            <div class="overlay">
+            <h3 class="hero-collections__cart-title">{{ block.settings.collection.title| downcase }}</h3>
+           </div>
         </a>
         {% endfor %}
     </div>
 </div>
+<style>
+ 
+.hero-collections__card {
+    position: relative;
+    border: 3px solid black;
+    border-radius: 7px;
+    background-color: #E8EFFA;
+    margin: 40px auto;
+    background-size: cover;
+    height: 240px;
+    width: 310px;
+}
 
+.hero-collections__cart-title {
+    font-size: 31px;
+    font-weight: 400;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin:0;
+    opacity: 1;
+    transition:opacity 0.3s;
+}
+.hero-collections {
+    margin: 80px 0 100px;
+}
+.hero-collections__card-ctn {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.hero-collections__card:hover > .hero-collections__card-title {
+    opacity: 0;
+    transition: none;
+}
+.hero-collections__card--bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+}
+</style>
 
 {% schema %}
 {
