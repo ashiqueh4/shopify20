@@ -226,6 +226,44 @@
       "settings": {
         "collection": "denim"
       }
+    },
+    "1635848538e354bfa0": {
+      "type": "custom-collection",
+      "blocks": {
+        "252710e0-fc74-44cf-9f21-f08e610f4562": {
+          "type": "collection",
+          "settings": {
+            "collection": "accessories"
+          }
+        },
+        "5a8e5299-e03e-4dcc-a80d-8cb3efb48268": {
+          "type": "collection",
+          "settings": {
+            "collection": "back-to-work"
+          }
+        },
+        "2f4e3fa8-cb1c-4f84-b918-dd0461fc0e42": {
+          "type": "collection",
+          "settings": {
+            "collection": "beach"
+          }
+        },
+        "bb963c5b-3f53-4841-a789-f43affbf25b3": {
+          "type": "collection",
+          "settings": {
+            "collection": "denim"
+          }
+        }
+      },
+      "block_order": [
+        "252710e0-fc74-44cf-9f21-f08e610f4562",
+        "5a8e5299-e03e-4dcc-a80d-8cb3efb48268",
+        "2f4e3fa8-cb1c-4f84-b918-dd0461fc0e42",
+        "bb963c5b-3f53-4841-a789-f43affbf25b3"
+      ],
+      "settings": {
+        "header": "take a look around"
+      }
     }
   },
   "order": [
@@ -236,6 +274,7 @@
     "video",
     "multi_column",
     "1635784272ba8b1243",
-    "16357843921d6d8acf"
+    "16357843921d6d8acf",
+    "1635848538e354bfa0"
   ]
 }
