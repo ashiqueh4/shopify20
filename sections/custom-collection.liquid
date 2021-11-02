@@ -1,11 +1,11 @@
 
-<div class="hero-collections">
-    <div class="hero-collections__card-ctn">
+<div class="custom-collections">
+    <div class="custom-collections__card-ctn">
         {% for block in section.blocks %}
-            <a class="hero-collections__card" href="{{ block.settings.collection.url }}">
-            <div class="hero-collections__card--bg" style="background-image: url({{ block.settings.image_bg|img_url: 'medium' }});"></div>
-            <div class="hero-collections__card--hover" style="background-image:url({{ block.settings.image_hover|img_url: 'medium' }})"></div>
-            <h3 class="hero-collections__cart-title">{{ block.settings.collection.title| downcase }}</h3>
+            <a class="custom-collections__card" href="{{ block.settings.collection.url }}">
+            <div class="custom-collections__card--bg" style="background-image: url({{ block.settings.image_bg|img_url: 'medium' }});"></div>
+            <div class="custom-collections__card--hover" style="background-image:url({{ block.settings.image_hover|img_url: 'medium' }})"></div>
+            <h3 class="custom-collections__cart-title">{{ block.settings.collection.title| downcase }}</h3>
            
         </a>
         {% endfor %}
@@ -13,7 +13,7 @@
 </div>
 <style>
  
-.hero-collections__card {
+.custom-collections__card {
     position: relative;
     border: 3px solid black;
     border-radius: 7px;
@@ -24,7 +24,7 @@
     width: 310px;
 }
 
-.hero-collections__cart-title {
+.custom-collections__cart-title {
     font-size: 31px;
     font-weight: 400;
     text-align: center;
@@ -36,20 +36,20 @@
     opacity: 1;
     transition:opacity 0.3s;
 }
-.hero-collections {
+.custom-collections {
     margin: 80px 0 100px;
 }
-.hero-collections__card-ctn {
+.custom-collections__card-ctn {
     display: flex; 
     flex-direction: row;
     position: relative;
 }
-.hero-collections__card:hover > .hero-collections__cart-title,
-.hero-collections__card:hover > .hero-collections__card--bg {
+.custom-collections__card:hover > .custom-collections__cart-title,
+.custom-collections__card:hover > .custom-collections__card--bg {
     opacity: 0;
     transition: none;
 }
-.hero-collections__card--bg {
+.custom-collections__card--bg {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -63,7 +63,7 @@
     transform: translate(-50%, -50%);
 }
 
-.hero-collections__card--hover {
+.custom-collections__card--hover {
     background-repeat: no-repeat;
     background-size: 60%;
     background-position: center;
@@ -77,26 +77,26 @@
     transform: translate(-50%, -50%);
     transition:none;
 }
-.hero-collections__card:hover > .hero-collections__card--hover {
+.custom-collections__card:hover > .custom-collections__card--hover {
     opacity: 1;
     transition:opacity 0.3s;
 }
 @media screen and (min-width:768px){
-	.hero-collections__card{
+	.custom-collections__card{
 	height:200px;
 	width:240px;
 	}
 }
 
 @media screen and (min-width:900px){
-.hero-collections__card{
+.custom-collections__card{
 	height:230px;
 	width:290px;
 	}
 }
 
 @media screen and (min-width:1200px){
-.hero-collections__card{
+.custom-collections__card{
 	height:270px;
 	width:330px;
 	}
@@ -126,7 +126,7 @@
             "type": "image_picker",
             "id": "image_hover",
             "label":"Image Hover"
-        }  
+        }  y
         ]
     }
     ],
